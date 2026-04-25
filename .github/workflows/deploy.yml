@@ -13,7 +13,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-        with:
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
