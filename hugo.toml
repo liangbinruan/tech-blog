@@ -1,0 +1,37 @@
+
+baseURL = 'https://liangbinruan.github.io/tech-blog/'
+languageCode = 'zh-cn'
+title = '阮良斌的技术博客'
+theme = 'hermes-blog'
+
+[author]
+  name = '阮良斌'
+  bio = '技术开发者'
+
+[params]
+  description = '技术博客，分享 arXiv 论文解读和 WeChat 文章分析'
+
+[[menu.main]]
+  name = '首页'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = '关于'
+  url = '/about/'
+  weight = 2
+
+[[menu.main]]
+  name = '文章'
+  url = '/posts/'
+  weight = 3
+
+[[menu.main]]
+  name = 'arXiv 论文'
+  url = '/posts/arxiv/'
+  weight = 4
+
+[[menu.main]]
+  name = 'WeChat 文章'
+  url = '/posts/wechat/'
+  weight = 5

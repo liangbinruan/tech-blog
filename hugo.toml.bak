@@ -1,0 +1,42 @@
+baseURL = "https://liangbinruan.github.io/tech-blog/"
+languageCode = "zh-cn"
+title = "Your Tech Blog"
+theme = "lotusdocs"
+
+# 作者信息
+[author]
+  name = "Your Name"
+  email = "your.email@example.com"
+
+# 菜单配置
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "categories"
+  name = "分类"
+  url = "/categories/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 3
+
+# 页面配置
+[params]
+  description = "Technical Insights & Tutorials"
+  readingTime = true
+  readingTimeIcon = true
+  showShareButtons = true
+  showPagination = true
+  copyright = "© 2026 Your Name"
+
+# SEO 优化
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]

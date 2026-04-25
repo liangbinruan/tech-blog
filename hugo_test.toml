@@ -1,0 +1,6 @@
+
+baseURL = "https://example.com/"
+languageCode = "zh-cn"
+title = "Test Blog"
+theme = "lotusdocs"
+themesDir = "themes"

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h2>最新文章</h2>
+{{ range .Site.Pages }}
+<div class="post-item">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Summary | truncate 150 }}</p>
+</div>
+{{ end }}
+{{ end }}
