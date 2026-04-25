@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          submodules: recursive  # 拉取主题 submodule
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
