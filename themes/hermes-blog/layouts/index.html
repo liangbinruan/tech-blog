@@ -1,24 +1,30 @@
 {{ define "main" }}
-<div style="margin-bottom: 40px;">
-    <h2>欢迎来到技术观察学习者</h2>
+<div class="hero">
+    <h1>欢迎来到技术观察学习者</h1>
     <p>这里记录对前沿技术的观察、思考与学习。</p>
-    <br>
-    <h3>内容方向</h3>
-    <ul>
-        <li><strong>arXiv 论文解读</strong> — 追踪 AI/ML 前沿研究，深入解读核心思想</li>
-        <li><strong>技术社区精选</strong> — 从微信公众号等技术社区提取优质内容</li>
-        <li><strong>系统架构实践</strong> — 分享自动化系统、Agent 框架的设计与实现</li>
-    </ul>
 </div>
 
-<hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
-
-<h2>最新文章</h2>
-{{ range where .Site.RegularPages "Section" "posts" }}
-<div class="post-item">
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p><small>{{ .Date.Format "2006-01-02" }}</small></p>
-    <p>{{ .Summary | truncate 200 }}</p>
+<div class="container">
+    <div class="card-grid">
+        {{ range where .Site.RegularPages "Section" "posts" }}
+        <div class="card">
+            <div class="card-body">
+                <div class="card-meta">
+                    <span class="category">{{ .Section | humanize }}</span>
+                    <span>{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <p>{{ .Summary | truncate 180 }}</p>
+                {{ if .Params.tags }}
+                <div class="card-tags">
+                    {{ range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
 </div>
-{{ end }}
 {{ end }}
