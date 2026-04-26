@@ -1,7 +1,7 @@
 
 baseURL = 'https://liangbinruan.github.io/tech-blog/'
 languageCode = 'zh-cn'
-title = '阮良斌的技术博客'
+title = '技术观察学习者'
 theme = 'hermes-blog'
 
 [author]
